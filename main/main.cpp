@@ -4344,9 +4344,7 @@ int Main::start() {
 	if (movie_writer) {
 		movie_writer->begin(DisplayServer::get_singleton()->window_get_size(), fixed_fps, Engine::get_singleton()->get_write_movie_path());
 	}
-	if (!Math::is_equal_approx((double)Input::get_singleton()->get_last_mouse_velocity().length_squared(), (double)0.0)) {
-		Input::get_singleton()->clear_mouse_axes_action_state();
-	}
+
 	if (minimum_time_msec) {
 		uint64_t minimum_time = 1000 * minimum_time_msec;
 		uint64_t elapsed_time = OS::get_singleton()->get_ticks_usec();

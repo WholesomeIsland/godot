@@ -300,8 +300,7 @@ public:
 
 	void set_screen_velocity(const Vector2 &p_velocity);
 	Vector2 get_screen_velocity() const;
-	virtual bool action_match(const Ref<InputEvent> &p_event, bool p_exact_match, float p_deadzone, bool *r_pressed, float *r_strength, float *r_raw_strength) const override;
-	virtual bool is_match(const Ref<InputEvent> &p_event, bool p_exact_match = true) const override;
+
 	virtual Ref<InputEvent> xformed_by(const Transform2D &p_xform, const Vector2 &p_local_ofs = Vector2()) const override;
 	virtual String as_text() const override;
 	virtual String to_string() override;
